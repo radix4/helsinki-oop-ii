@@ -1,8 +1,10 @@
 package wormgame.domain;
 
-public class Apple extends Piece{
+/* Acts exactly as a piece, separate class to keep track */
+public class Apple extends Piece {
 
     public Apple(int x, int y) {
         super(x, y);
     }
+
 }

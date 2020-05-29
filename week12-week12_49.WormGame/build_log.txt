@@ -117,6 +117,7 @@ compile:
 -compile-test-depend:
 
 -do-compile-test:
+     [copy] Copying 2 files to /Users/aruko/IdeaProjects/TMCProjects/mooc-2013-OOProgrammingWithJava-PART2/week12-week12_49.WormGame/build/test/classes
 
 -post-compile-test:
 

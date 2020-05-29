@@ -3,12 +3,14 @@ package wormgame.gui;
 import wormgame.Direction;
 import wormgame.domain.Worm;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+/** The listener class only do just that
+ * which is to assign key pressed to do direction*/
+
 public class KeyboardListener implements KeyListener {
+
     private Worm worm;
 
     public KeyboardListener(Worm worm) {
@@ -26,10 +28,10 @@ public class KeyboardListener implements KeyListener {
             worm.setDirection(Direction.UP);
         }else if(e.getKeyCode() == KeyEvent.VK_DOWN){
             worm.setDirection(Direction.DOWN);
-        }else if(e.getKeyCode() == KeyEvent.VK_LEFT){
-            worm.setDirection(Direction.LEFT);
         }else if(e.getKeyCode() == KeyEvent.VK_RIGHT){
             worm.setDirection(Direction.RIGHT);
+        }else if(e.getKeyCode() == KeyEvent.VK_LEFT){
+            worm.setDirection(Direction.LEFT);
         }
     }
 

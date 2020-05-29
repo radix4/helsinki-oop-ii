@@ -6,99 +6,101 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Worm {
-    private int x; // coordinates of the worm on the board
+    private int x;
     private int y;
     private Direction direction;
-    private List<Piece> pieces; // a list of instances of class Piece
+    private List<Piece> pieces; /* list contains all Piece instances */
     private boolean grow;
+
 
     public Worm(int originalX, int originalY, Direction originalDirection) {
         this.x = originalX;
         this.y = originalY;
         this.direction = originalDirection;
+        this.grow = true;
         this.pieces = new ArrayList<Piece>();
-        this.pieces.add(new Piece(originalX, originalY)); // initial worm piece (the head)
-
+        pieces.add(new Piece(originalX,originalY));
     }
 
-    /* moves the worm one piece forward */
+    /* moves one piece at a time
+    * --> remove one tail, add one head
+    * tail index = 0 , head index = last in list */
     public void move(){
-        int newX = pieces.get(pieces.size() -1).getX();
-        int newY = pieces.get(pieces.size() -1).getY();
+        int newX = pieces.get(pieces.size() - 1).getX();
+        int newY = pieces.get(pieces.size() - 1).getY();
 
-        if(getDirection() == Direction.UP){
+        if (direction == Direction.UP){
             newY--;
-        } else if (getDirection() == Direction.DOWN){
+        } else if (direction == Direction.DOWN){
             newY++;
-        } else if (getDirection() == Direction.LEFT) {
-            newX--;
-        } else if (getDirection() == Direction.RIGHT) {
+        } else if (direction == Direction.RIGHT){
             newX++;
+        } else if (direction == Direction.LEFT){
+            newX--;
         }
 
-
-        /* if there are at least 3 pieces already and not growing
-        * if the worm grows, do not remove the tail*/
-        if (getLength() > 2 && !grow) {
+        if(!grow && pieces.size() >= 3){ //minimum size = 3
             pieces.remove(0);
         } else {
-            grow = false;
+            grow = false; // you don't want it continue to keep growing
         }
 
-        pieces.add(new Piece(newX, newY));
+        pieces.add(new Piece(newX,newY));
+
     }
 
-    /* grows the worm by one piece
-    * worm grows together with the following move method call
-    * after the first move method, worm does not grow anymore*/
     public void grow(){
         grow = true;
     }
 
-    /* checks if worm runs into parameter piece (apple) */
+    // checks if worm runs into apple, not just the head, even body, tail, etc.
     public boolean runsInto(Piece piece){
-        for (Piece p : pieces){
-            if(p.getX() == piece.getX() && p.getY() == piece.getY()){
+        for (Piece p : getPieces()){
+            if (p.getX() == piece.getX() && p.getY() == piece.getY()){
                 return true;
             }
         }
+
         return false;
     }
 
-    /* checks if worm runs into itself
-    * true if yes, else false */
     public boolean runsIntoItself(){
-        for (int i = 0; i < getLength(); i++){
-            for (int j = i +1; j < getLength(); j++){
-                if(sameSpot(pieces.get(i),pieces.get(j))){
+        for (int i = 0; i < pieces.size(); i++){
+            for (int j = 1; j < pieces.size(); j++){
+                if(i == j){
+                    continue;
+                }
+
+                if (sameSpot(pieces.get(i),pieces.get(j))){
                     return true;
                 }
             }
         }
+
         return false;
     }
 
-    private boolean sameSpot(Piece p1, Piece p2){
+    public boolean sameSpot(Piece p1, Piece p2){
         return p1.getX() == p2.getX() && p1.getY() == p2.getY();
     }
 
-    // return a list of Piece instances
-    public List<Piece> getPieces() {
-        return pieces;
-    }
-
-    /* returns the length(number of pieces) of the worm */
+    // worm's length
     public int getLength(){
         return pieces.size();
     }
 
-    // classic getter
+    // worm's all individual pieces
+    public List<Piece> getPieces(){
+        return pieces;
+    }
+
+    // direction which worm moves
     public Direction getDirection() {
         return direction;
     }
 
-    /*set a new direction each time method move() is called */
-    public void setDirection(Direction dir) {
-        this.direction = dir;
+    public void setDirection(Direction direction) {
+        this.direction = direction;
     }
+
 }

@@ -1,10 +1,10 @@
 package wormgame.domain;
 
-public class Piece { // this is a super class
+public class Piece {
     private int x;
     private int y;
 
-    public Piece(int x, int y) { //coordinates on the frame
+    public Piece(int x, int y) {
         this.x = x;
         this.y = y;
     }
@@ -17,12 +17,12 @@ public class Piece { // this is a super class
         return y;
     }
 
-    public boolean runsInto(Piece piece){ // interesting, calling its own
+    public boolean runsInto(Piece piece){
         return x == piece.getX() && y == piece.getY();
     }
 
     @Override
     public String toString() {
-        return "(" + getX() + "," + getY() + ")";
+        return "(" + x + "," + y + ")";
     }
 }

@@ -25,32 +25,34 @@ public class WormGame extends Timer implements ActionListener {
         this.width = width;
         this.height = height;
         this.continues = true;
+
         this.worm = new Worm(width/2,height/2,Direction.DOWN);
-        newApple();
+        createNewApple();
 
         addActionListener(this);
         setInitialDelay(2000);
 
     }
 
-    public Worm getWorm(){
-        return worm;
+
+    public boolean continues() {
+        return continues;
     }
 
-    public void setWorm(Worm worm) {
-        this.worm = worm;
+    public Worm getWorm() {
+        return worm;
     }
 
     public Apple getApple() {
         return apple;
     }
 
-    public void setApple(Apple apple) {
-        this.apple = apple;
+    public void setWorm(Worm worm) {
+        this.worm = worm;
     }
 
-    public boolean continues() {
-        return continues;
+    public void setApple(Apple apple) {
+        this.apple = apple;
     }
 
     public void setUpdatable(Updatable updatable) {
@@ -65,19 +67,19 @@ public class WormGame extends Timer implements ActionListener {
         return width;
     }
 
-    private void newApple(){
+    public void createNewApple(){
         while (true) {
             this.apple = new Apple(new Random().nextInt(width), new Random().nextInt(height));
-            if (!worm.runsInto(apple)){
+            if(!worm.runsInto(apple)){
                 break;
             }
         }
     }
 
-    private boolean wormHitsBorder(){
+    public boolean runsIntoBorder(){
         for(Piece p : worm.getPieces()){
-            if (p.getY() == height || p.getX() == width
-            || p.getX() == 0 || p.getY() == 0){
+            if (p.getX() == -1 || p.getY() == -1 ||
+            p.getX() == width || p.getY() == height){
                 return true;
             }
         }
@@ -90,20 +92,19 @@ public class WormGame extends Timer implements ActionListener {
             return;
         }
 
-        worm.move(); // just need to be called once?
+        worm.move();
 
-        if(worm.runsInto(apple)){
+        if (worm.runsInto(apple)){
             worm.grow();
-            newApple();
+            createNewApple();
         }
 
-        if(worm.runsIntoItself() || wormHitsBorder()){
+        if (worm.runsIntoItself() || runsIntoBorder()){
             continues = false;
         }
 
         updatable.update();
         setDelay(1000/worm.getLength());
-
     }
 
 }
