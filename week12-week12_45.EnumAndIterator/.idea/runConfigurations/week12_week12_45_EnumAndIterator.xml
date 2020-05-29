@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="week12-week12_45.EnumAndIterator" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="personnel.Main" />
+    <module name="week12-week12_45.EnumAndIterator" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

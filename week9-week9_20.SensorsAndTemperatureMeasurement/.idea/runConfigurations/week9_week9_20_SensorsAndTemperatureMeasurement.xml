@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="week9-week9_20.SensorsAndTemperatureMeasurement" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="application.main" />
+    <module name="week9-week9_20.SensorsAndTemperatureMeasurement" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

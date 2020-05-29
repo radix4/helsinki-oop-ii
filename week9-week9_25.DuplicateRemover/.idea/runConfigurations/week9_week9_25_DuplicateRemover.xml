@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="week9-week9_25.DuplicateRemover" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="tools.Main" />
+    <module name="week9-week9_25.DuplicateRemover" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

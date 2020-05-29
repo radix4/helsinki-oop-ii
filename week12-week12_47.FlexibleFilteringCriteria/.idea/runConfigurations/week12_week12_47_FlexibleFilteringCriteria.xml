@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="week12-week12_47.FlexibleFilteringCriteria" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="reader.Main" />
+    <module name="week12-week12_47.FlexibleFilteringCriteria" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

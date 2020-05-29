@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="week11-week11_37.Survey" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="survey.Main" />
+    <module name="week11-week11_37.Survey" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

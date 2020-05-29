@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="week12-week12_46.FilmReference" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="reference.Main" />
+    <module name="week12-week12_46.FilmReference" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

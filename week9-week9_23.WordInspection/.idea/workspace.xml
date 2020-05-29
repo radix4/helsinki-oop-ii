@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5129dabf-108e-438c-a7a4-d893dca9f796" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bs9OYUwsdXbLpPYbyUbKJVRuud" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5129dabf-108e-438c-a7a4-d893dca9f796" name="Default Changelist" comment="" />
+      <created>1589409902112</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589409902112</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="828" y="252" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1589411029515">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="828" y="252" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.877@0.23.1440.877" timestamp="1589411029515" />
+    <state width="657" height="230" key="GridCell.Tab.0.bottom" timestamp="1589412828755">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="657" height="230" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1589412828755" />
+    <state width="657" height="230" key="GridCell.Tab.0.center" timestamp="1589412828754">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="657" height="230" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1589412828754" />
+    <state width="657" height="230" key="GridCell.Tab.0.left" timestamp="1589412828753">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="657" height="230" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1589412828753" />
+    <state width="657" height="230" key="GridCell.Tab.0.right" timestamp="1589412828754">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="657" height="230" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1589412828754" />
+    <state x="416" y="43" key="SettingsEditor" timestamp="1589410139305">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="416" y="43" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1589410139305" />
+  </component>
+</project>

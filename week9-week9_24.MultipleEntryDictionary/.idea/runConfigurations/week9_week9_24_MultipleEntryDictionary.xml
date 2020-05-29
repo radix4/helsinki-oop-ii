@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="week9-week9_24.MultipleEntryDictionary" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="dictionary.Main" />
+    <module name="week9-week9_24.MultipleEntryDictionary" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
