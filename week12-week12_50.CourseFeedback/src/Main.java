@@ -6,9 +6,5 @@ public class Main {
                 "Course is over!\n" + 
                 "After you have submitted this exercise, remember to give us " + 
                 "some feedback about this course\n");
-
-        System.out.println("Feedback: I really enjoyed the materials presented," +
-                "some were very well coded and effective" +
-                "thank you for the exercises, I definitely learned a lot");
     }
 }

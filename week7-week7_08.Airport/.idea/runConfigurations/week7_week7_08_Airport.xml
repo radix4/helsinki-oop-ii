@@ -1,9 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="week7-week7_08.Airport" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="Main" />
-    <module name="week7-week7_08.Airport" />
-    <method v="2">
-      <option name="Make" enabled="true" />
-    </method>
-  </configuration>
-</component>

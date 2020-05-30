@@ -1,6 +1,4 @@
-//import sun.tools.jconsole.inspector.IconManager;
-
-public class Student implements Comparable<Student>{
+public class Student {
 
     private String name;
 
@@ -10,11 +8,6 @@ public class Student implements Comparable<Student>{
 
     public String getName() {
         return name;
-    }
-
-    @Override
-    public int compareTo(Student student) {
-        return this.name.compareToIgnoreCase(student.getName());
     }
 
     @Override

@@ -1,9 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="week9-week9_22.FileAnalysis" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="file.Main" />
-    <module name="week9-week9_22.FileAnalysis" />
-    <method v="2">
-      <option name="Make" enabled="true" />
-    </method>
-  </configuration>
-</component>
