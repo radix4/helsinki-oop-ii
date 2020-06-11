@@ -1,7 +1,10 @@
-
+/** This program sort the Person class from rich to poor last.
+ * @author  Thang Cao
+ * @since   06/11/2020
+ * */
 import java.util.ArrayList;
 import java.util.List;
-//import java.util.Collections;
+import java.util.Collections;
 
 public class Main {
 
@@ -16,10 +19,7 @@ public class Main {
 
         System.out.println(people);
 
-        /*
-         * When you have implemented the compareTo-method, remove comment below.
-         */
-        // Collections.sort(people);
+        Collections.sort(people);
         System.out.println(people);
 
     }
