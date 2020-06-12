@@ -1,4 +1,4 @@
-public class Student {
+public class Student implements Comparable<Student>{
 
     private String name;
 
@@ -15,4 +15,8 @@ public class Student {
         return name;
     }
 
+    @Override
+    public int compareTo(Student o) {
+        return name.compareToIgnoreCase(o.getName());
+    }
 }
