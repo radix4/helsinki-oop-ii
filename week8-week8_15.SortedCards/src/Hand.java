@@ -27,6 +27,10 @@ public class Hand implements Comparable<Hand>{
         Collections.sort(cards);
     }
 
+    public void sortAgainstSuit() {
+        Collections.sort(cards, new SortAgainstSuitAndValue());
+    }
+
     public void print() {
         for (Card c : cards) {
             System.out.println(c);
