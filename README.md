@@ -9,5 +9,8 @@ Reference: https://www.mooc.fi/en
 --------------------------------------------------------------------
 What I learned:
 
-  - How to structure a program
+  - Properly structure a program
+  - How and when to appropriately implement Interface
+  - Override equals() and hashCode() methods
+  - Comparable & Comparator interfaces make use of generics
   - 
