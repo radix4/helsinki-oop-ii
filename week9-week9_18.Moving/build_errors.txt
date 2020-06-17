@@ -1,0 +1,6 @@
+
+BUILD FAILED
+/Users/aruko/IdeaProjects/TMCProjects/mooc-2013-OOProgrammingWithJava-PART2/week9-week9_18.Moving/nbproject/build-impl.xml:915: The following error occurred while executing this line:
+/Users/aruko/IdeaProjects/TMCProjects/mooc-2013-OOProgrammingWithJava-PART2/week9-week9_18.Moving/nbproject/build-impl.xml:268: Compile failed; see the compiler error output for details.
+
+Total time: 0 seconds
