@@ -5,9 +5,11 @@ import java.util.List;
 
 public class AverageSensor implements Sensor {
     private List<Sensor> sensors;
+    private List<Integer> readings;
 
     public AverageSensor() {
         sensors = new ArrayList<>();
+        readings = new ArrayList<>();
     }
 
     @Override
@@ -47,6 +49,8 @@ public class AverageSensor implements Sensor {
             totalReading += s.measure();
         }
 
+        readings.add(totalReading / sensors.size());
+
         return totalReading / sensors.size();
     }
 
@@ -58,5 +62,9 @@ public class AverageSensor implements Sensor {
         }
 
         sensors.add(additional);
+    }
+
+    public List<Integer> readings() {
+        return readings;
     }
 }
