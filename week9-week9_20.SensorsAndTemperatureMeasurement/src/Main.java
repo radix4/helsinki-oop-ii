@@ -4,18 +4,26 @@
  * @since   06/18/2020
  * */
 
+import application.AverageSensor;
 import application.ConstantSensor;
+import application.Sensor;
+import application.Thermometer;
 
 public class Main {
     public static void main(String[] args) {
-        ConstantSensor ten = new ConstantSensor(10);
-        ConstantSensor minusFive = new ConstantSensor(-5);
+        Sensor kumpula = new Thermometer();
+        kumpula.on();
+        System.out.println("the temperature in Kumpula is "+kumpula.measure() + " degrees");
 
-        System.out.println( ten.measure() );
-        System.out.println( minusFive.measure() );
+        Sensor kaisaniemi = new Thermometer();
+        Sensor helsinkiVantaa = new Thermometer();
 
-        System.out.println( ten.isOn() );
-        ten.off();
-        System.out.println( ten.isOn() );
+        AverageSensor helsinkiArea = new AverageSensor();
+        helsinkiArea.addSensor(kumpula);
+        helsinkiArea.addSensor(kaisaniemi);
+        helsinkiArea.addSensor(helsinkiVantaa);
+
+        helsinkiArea.on();
+        System.out.println("the temperature in Helsinki area is "+helsinkiArea.measure() + " degrees");
     }
 }
