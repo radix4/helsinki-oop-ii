@@ -1,3 +1,9 @@
+/**
+ * This program calculates the number of lines and characters in a text file.
+ * @author  Thang Cao
+ * @since   06/20/2020
+ * */
+
 package file;
 
 import java.io.File;
