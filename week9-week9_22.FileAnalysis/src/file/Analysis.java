@@ -33,4 +33,9 @@ public class Analysis {
         String content = readFile();
         return content.split("\n").length;
     }
+
+    public int characters() {
+        String content = readFile();
+        return content.length();
+    }
 }
