@@ -36,4 +36,14 @@ public class WordInspection {
         return this.file.size();
     }
 
+    public List<String> wordsContainingZ() {
+        List<String> toBeReturned = new ArrayList<String>();
+        for (String word : this.file) {
+            if (word.contains("z")) {
+                toBeReturned.add(word);
+            }
+        }
+
+        return toBeReturned;
+    }
 }
