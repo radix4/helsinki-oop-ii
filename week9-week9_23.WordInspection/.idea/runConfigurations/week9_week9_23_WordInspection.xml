@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="week9-week9_23.WordInspection" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="wordinspection.Main" />
+    <module name="week9-week9_23.WordInspection" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
