@@ -46,4 +46,15 @@ public class WordInspection {
 
         return toBeReturned;
     }
+
+    public List<String> wordsEndingInL() {
+        List<String> toBeReturned = new ArrayList<String>();
+        for (String word : this.file) {
+            if (word.endsWith("l")) {
+                toBeReturned.add(word);
+            }
+        }
+
+        return toBeReturned;
+    }
 }
