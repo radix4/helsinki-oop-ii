@@ -74,5 +74,25 @@ public class WordInspection {
         return toBeReturned;
     }
 
+    public List<String> wordsWhichContainAllVowels() {
+        List<String> toBeReturned = new ArrayList<String>();
+        for (String word : this.file) {
+            if (containsAllVowels(word)) {
+                toBeReturned.add(word);
+            }
+        }
 
+        return toBeReturned;
+    }
+
+    private boolean containsAllVowels(String word) {
+        String vowels = "aeiouyäö";
+
+        for (char vowel: vowels.toCharArray()) {
+            if (!word.contains("" + vowel)) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
