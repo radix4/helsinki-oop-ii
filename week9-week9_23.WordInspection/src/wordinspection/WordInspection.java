@@ -57,4 +57,22 @@ public class WordInspection {
 
         return toBeReturned;
     }
+    private String reverse(String str) {
+        StringBuilder sb = new StringBuilder(str);
+        return sb.reverse().toString();
+    }
+
+
+    public List<String> palindromes() {
+        List<String> toBeReturned = new ArrayList<String>();
+        for (String word : this.file) {
+            if (word.equals(reverse(word))) {
+                toBeReturned.add(word);
+            }
+        }
+
+        return toBeReturned;
+    }
+
+
 }
