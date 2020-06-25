@@ -1,3 +1,9 @@
+/**
+ * This program keeps track of observed birds in a ringing center.
+ * @author  Thang Cao
+ * @since   06/25/2020
+ * */
+
 import java.util.Objects;
 
 public class Bird {
@@ -22,13 +28,13 @@ public class Bird {
             return true;
         }
 
-        if (this.getClass() == o.getClass()){
-            return true;
+        if (!(this.getClass() == o.getClass())){
+            return false;
         }
 
         Bird compared = (Bird) o;
 
-        return latinName.equals(compared.getLatinName()) && ringingYear == compared.ringingYear;
+        return latinName.equals(compared.getLatinName()) && ringingYear == compared.getRingingYear();
     }
 
     public String getLatinName() {
@@ -54,15 +60,18 @@ public class Bird {
     }
 
     public static void main(String[] args) {
-        Bird bird1 = new Bird("Rose Starling", "Sturnus roseus", 2012);
-        Bird bird2 = new Bird("Rose-Coloured Starling", "Sturnus roseus", 2012);
-        Bird bird3 = new Bird("Hooded Crow", "Corvus corone cornix", 2012);
-        Bird bird4 = new Bird("Rose-Coloured Pastor", "Sturnus roseus", 2000);
+        RingingCentre kumpulaCentre = new RingingCentre();
 
-        System.out.println( bird1.equals(bird2));   // same Latin name and same observation year: they are the same bird
-        System.out.println( bird1.equals(bird3));   // different Latin name: they are not the same bird
-        System.out.println( bird1.equals(bird4));   // different observation year: not the same bird
-        System.out.println( bird1.hashCode()==bird2.hashCode() );
+        kumpulaCentre.observe( new Bird("Rose Starling", "Sturnus roseus", 2012), "Arabia" );
+        kumpulaCentre.observe( new Bird("Rose-Coloured Starling", "Sturnus roseus", 2012), "Vallila" );
+        kumpulaCentre.observe( new Bird("European Herring Gull", "Larus argentatus", 2008), "Kumpulanmäki" );
+        kumpulaCentre.observe( new Bird("Rose Starling", "Sturnus roseus", 2008), "Mannerheimintie" );
+
+        kumpulaCentre.observations( new Bird("Rose-Coloured Starling", "Sturnus roseus", 2012 ) );
+        System.out.println("--");
+        kumpulaCentre.observations( new Bird("European Herring Gull", "Larus argentatus", 2008 ) );
+        System.out.println("--");
+        kumpulaCentre.observations( new Bird("European Herring Gull", "Larus argentatus", 1980 ) );
     }
 }
 
