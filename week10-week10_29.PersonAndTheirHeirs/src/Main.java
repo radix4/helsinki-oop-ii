@@ -2,6 +2,9 @@ import people.Person;
 import people.Student;
 import people.Teacher;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * This program demonstrates inheritance feature.
  * @author  Thang Cao
@@ -10,16 +13,17 @@ import people.Teacher;
 
 public class Main {
 
-    public static void main(String[] args) {
-        Teacher pekka = new Teacher("Pekka Mikkola", "Korsontie Street 1 03100 Vantaa", 1200);
-        Teacher esko = new Teacher("Esko Ukkonen", "Mannerheimintie 15 Street 00100 Helsinki", 5400);
-        System.out.println( pekka );
-        System.out.println( esko );
-
-        Student olli = new Student("Olli", "Ida Albergintie 1 Street 00400 Helsinki");
-        for ( int i=0; i < 25; i++ ) {
-            olli.study();
+    public static void printDepartment(List<Person> people) {
+        for (Person p : people) {
+            System.out.println(p);
         }
-        System.out.println( olli );
+    }
+
+    public static void main(String[] args) {
+        List<Person> people = new ArrayList<Person>();
+        people.add( new Teacher("Pekka Mikkola", "Korsontie Street 1 03100 Vantaa", 1200) );
+        people.add( new Student("Olli", "Ida Albergintie Street 1 00400 Helsinki") );
+
+        printDepartment(people);
     }
 }
