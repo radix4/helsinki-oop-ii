@@ -1,5 +1,6 @@
 import people.Person;
 import people.Student;
+import people.Teacher;
 
 /**
  * This program demonstrates inheritance feature.
@@ -10,9 +11,15 @@ import people.Student;
 public class Main {
 
     public static void main(String[] args) {
-        Student olli = new Student("Olli", "Ida Albergintie Street 1 00400 Helsinki");
-        System.out.println( olli );
-        olli.study();
+        Teacher pekka = new Teacher("Pekka Mikkola", "Korsontie Street 1 03100 Vantaa", 1200);
+        Teacher esko = new Teacher("Esko Ukkonen", "Mannerheimintie 15 Street 00100 Helsinki", 5400);
+        System.out.println( pekka );
+        System.out.println( esko );
+
+        Student olli = new Student("Olli", "Ida Albergintie 1 Street 00400 Helsinki");
+        for ( int i=0; i < 25; i++ ) {
+            olli.study();
+        }
         System.out.println( olli );
     }
 }
