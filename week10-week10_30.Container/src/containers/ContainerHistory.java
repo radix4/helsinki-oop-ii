@@ -40,6 +40,36 @@ public class ContainerHistory {
         return sum / history.size();
     }
 
+    public double greatestFluctuation() {
+        if (history.isEmpty()) {
+            return 0;
+        }
+
+        double biggest = 0;
+
+        for (int i = 0; i < history.size() - 1; i++) {
+            double previousChange = Math.abs(history.get(i) - history.get(i + 1));
+            if (previousChange > biggest) {
+                biggest = previousChange;
+            }
+        }
+
+        return biggest;
+    }
+
+    public double variance() {
+        double average = average();
+
+        double subSquareSum = 0;
+        for (double number : history) {
+            double subtraction = number - average;
+            double subtractionSquare = subtraction * subtraction;
+            subSquareSum += subtractionSquare;
+        }
+
+        return subSquareSum / (history.size() - 1);
+    }
+
     @Override
     public String toString() {
         return history.toString();
