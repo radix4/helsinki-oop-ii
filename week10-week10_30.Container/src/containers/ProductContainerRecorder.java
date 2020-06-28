@@ -14,4 +14,16 @@ public class ProductContainerRecorder extends ProductContainer {
         return history.toString();
     }
 
+    @Override
+    public void addToTheContainer(double amount) {
+        super.addToTheContainer(amount);
+        history.add(getVolume());
+    }
+
+    @Override
+    public double takeFromTheContainer(double amount) {
+        double value = super.takeFromTheContainer(amount);
+        history.add(getVolume());
+        return value;
+    }
 }
