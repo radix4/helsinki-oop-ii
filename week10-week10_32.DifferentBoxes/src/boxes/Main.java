@@ -1,3 +1,9 @@
+/**
+ * This program demonstrates abstract classes.
+ * @author  Thang Cao
+ * @since   06/30/2020
+ * */
+
 package boxes;
 
 public class Main {
