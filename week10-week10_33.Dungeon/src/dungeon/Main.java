@@ -1,3 +1,9 @@
+/**
+ * This program is a small player and vampires game.
+ * @author  Thang Cao
+ * @since   07/01/2020
+ * */
+
 package dungeon;
 
 
