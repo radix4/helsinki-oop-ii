@@ -26,5 +26,11 @@ public class FileManager {
     }
 
     public void save(String file, List<String> texts) throws IOException {
+        FileWriter writer = new FileWriter(file);
+        for (String text : texts) {
+            writer.write(text);
+            writer.write("\n");
+        }
+        writer.close();
     }
 }
