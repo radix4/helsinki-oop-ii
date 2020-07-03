@@ -10,7 +10,13 @@ import java.util.Scanner;
 public class FileManager {
 
     public List<String> read(String file) throws FileNotFoundException {
-        return null;
+        Scanner reader = new Scanner(new File(file));
+        List<String> lines = new ArrayList<String>();
+
+        while (reader.hasNextLine()) {
+            lines.add(reader.nextLine());
+        }
+        return lines;
     }
 
     public void save(String file, String text) throws IOException {
