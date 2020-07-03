@@ -20,6 +20,9 @@ public class FileManager {
     }
 
     public void save(String file, String text) throws IOException {
+        FileWriter writer = new FileWriter(file);
+        writer.write(text);
+        writer.close();
     }
 
     public void save(String file, List<String> texts) throws IOException {
