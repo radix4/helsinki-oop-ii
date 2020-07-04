@@ -1,9 +1,9 @@
 package dictionary;
 
 import java.io.File;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.*;
 
 public class MindfulDictionary {
     private Map<String, String> words;
@@ -61,5 +61,31 @@ public class MindfulDictionary {
             words.put(parts[0], parts[1]);
             words.put(parts[1], parts[0]);
         }
+    }
+
+    private void saveWords(FileWriter writer) throws IOException {
+        List<String> alreadyInFile = new ArrayList<String>();
+
+        for (String word : words.keySet()) {
+
+            String translation = words.get(word);
+
+            if (!alreadyInFile.contains(word)) {
+                String pair = word + ":" + words.get(word);
+                writer.write(pair + "\n");
+                alreadyInFile.add(translation);
+            }
+        }
+    }
+
+    public boolean save() {
+        try {
+            FileWriter writer = new FileWriter(new File(file));
+            saveWords(writer);
+            writer.close();
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
     }
 }
