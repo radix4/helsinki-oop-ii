@@ -22,4 +22,11 @@ public class MindfulDictionary {
     public String translate(String word) {
         return words.get(word);
     }
+
+    public void remove(String word) {
+        String translation = translate(word);
+
+        words.remove(word);
+        words.remove(translation);
+    }
 }

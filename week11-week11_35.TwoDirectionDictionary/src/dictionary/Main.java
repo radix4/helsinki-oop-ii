@@ -11,11 +11,14 @@ public class Main {
         MindfulDictionary dict = new MindfulDictionary();
         dict.add("apina", "monkey");
         dict.add("banaani", "banana");
-        dict.add("apina", "apfe");
+        dict.add("ohjelmointi", "programming");
+        dict.remove("apina");
+        dict.remove("banana");
 
         System.out.println( dict.translate("apina") );
         System.out.println( dict.translate("monkey") );
-        System.out.println( dict.translate("programming") );
         System.out.println( dict.translate("banana") );
+        System.out.println( dict.translate("banaani") );
+        System.out.println( dict.translate("ohjelmointi") );
     }
 }
