@@ -11,6 +11,15 @@ What I learned:
 
   - Properly structure a program
   - How and when to appropriately implement Interface
+  - Interfaces and Interface Flexibility
   - Override equals() and hashCode() methods
   - Comparable & Comparator interfaces make use of generics
-  - 
+  - Throw Exceptions
+  - Read from files, write to files
+  - Data Structures (HashSet, HashMap, ArrayList, TreeSet, etc)
+  - Object Polymorphism (Inheritance)
+  - Abstract Classes (combine interfaces and inheritance)
+  - Single Responsibility Principle
+  - Organizing Classes into Packages
+  - User Interfaces (Swing, JFrame, Runnable)
+  - UI components (Texts, Buttons, Layouts)
