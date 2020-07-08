@@ -1,12 +1,18 @@
 package clicker.ui;
 
+import clicker.applicationlogic.Calculator;
+import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
 import javax.swing.*;
 
 public class UserInterface implements Runnable {
+    private Calculator calculator;
     private JFrame frame;
 
+    public UserInterface(Calculator calculator) {
+        this.calculator = calculator;
+    }
 
     @Override
     public void run() {
@@ -21,6 +27,15 @@ public class UserInterface implements Runnable {
     }
 
     private void createComponents(Container container) {
+        JLabel calculatorLabel = new JLabel();
+        calculatorLabel.setText("" + calculator.giveValue());
+
+        JButton button = new JButton();
+        button.setText("Click!");
+        button.addActionListener(new ClickListener(calculator, calculatorLabel));
+
+        container.add(calculatorLabel);
+        container.add(button, BorderLayout.SOUTH);
     }
 
     public JFrame getFrame() {
