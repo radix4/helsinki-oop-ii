@@ -1,5 +1,6 @@
 
 import java.awt.*;
+import java.util.EventListener;
 import javax.swing.*;
 
 public class GraphicCalculator implements Runnable {
@@ -28,7 +29,12 @@ public class GraphicCalculator implements Runnable {
         JButton plus = new JButton("+");
         JButton minus = new JButton("-");
         JButton reset = new JButton("Z");
+        EventListener handler = new EventListener(plus, minus, reset, resultField, inputField);
 
+        plus.addActionListener(handler);
+        minus.addActionListener(handler);
+        reset.addActionListener(handler);
+        reset.setEnabled(false);
         JPanel panel = new JPanel(new GridLayout(1, 3));
         panel.add(plus);
         panel.add(minus);
