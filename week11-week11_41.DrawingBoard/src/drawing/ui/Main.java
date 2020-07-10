@@ -1,3 +1,9 @@
+/**
+ * This program draws a UI smile face.
+ * @author  Thang Cao
+ * @since   07/09/2020
+ * */
+
 package drawing.ui;
 
 import javax.swing.SwingUtilities;
