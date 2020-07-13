@@ -10,6 +10,10 @@ public class Main {
         return string.matches("mon|tue|wed|thu|fri|sat|sun");
     }
 
+    public static boolean allVowels(String string) {
+        return string.matches("[aeiouåäö]*");
+    }
+
     public static void main(String[] args) {
         // write test code here
     }
