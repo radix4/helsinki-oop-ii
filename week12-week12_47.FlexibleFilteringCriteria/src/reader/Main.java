@@ -1,3 +1,9 @@
+/**
+ * This program filters the lines of a book.
+ * @author  Thang Cao
+ * @since   07/15/2020
+ * */
+
 package reader;
 
 import reader.criteria.Criterion;
